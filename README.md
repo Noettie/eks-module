@@ -2,7 +2,8 @@
 
 ## Sample usage:
 module "my-eks" {
-  source         = "./"
+  source         = "Noettie/eks-module/aws"
+  version        = "1.0.1"
   region         = "Enter your Region here"
   vpc_cidr       = "10.0.0.0/16"
   dns_hostnames  = true
