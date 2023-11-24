@@ -2,8 +2,8 @@
 
 ## Sample usage:
 module "my-eks" {
-  source         = "github.com/Noettie/eks-module.git"
-  region         = "Enter your Providers regions here"
+  source         = "./"
+  region         = "Enter your Region here"
   vpc_cidr       = "10.0.0.0/16"
   dns_hostnames  = true
   dns_support    = true
@@ -11,12 +11,11 @@ module "my-eks" {
   pub_two_cidr   = "10.0.2.0/24"
   priv_one_cidr  = "10.0.3.0/24"
   priv_two_cidr  = "10.0.4.0/24"
-  az_one         = "Enter your first az"
-  az_two         = "Enter your second az"
+  az_one         = "Enter your first AZ here"
+  az_two         = "Enter your second AZ here"
   vpc_id         = "aws_vpc.eks_vpc.id"
   eks_version    = "1.26"
   ami_type       = "AL2_x86_64"
   instance_types = ["t3.small", "t3.medium", "t3.large"]
   capacity_type  = "ON_DEMAND"
-
 }
