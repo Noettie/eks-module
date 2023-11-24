@@ -1,5 +1,8 @@
+## MY TF MODULE TO PROVISION AN EKS CLUSTER WITH CUSTOM NETWORKING------->
+
+## Sample usage:
 module "my-eks" {
-  source         = "./source"
+  source         = "github.com/Noettie/eks-module.git"
   region         = "Enter your Providers regions here"
   vpc_cidr       = "10.0.0.0/16"
   dns_hostnames  = true
